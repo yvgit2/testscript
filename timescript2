@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# timescript2: take a command with arguments and return start time end time and runtime 
+
+# usage ex: in teetime script
+# time . timescript2 command args | tee timescript`date +%s`.tee 
+
+#### doit avoir fait un sudo avec pass avant utilisation 
+
+# start time
+itime=$(date +%s.%N)
+
+
+case "$1" in
+    sudo)
+	# echo name of command and start time
+	echo b1 start $2 `date +%T`
+	$@
+	# echo name of command and end time
+	echo end $2 `date +%T`
+	ftime=$(date +%s.%N)
+	#Calcul and echo runtime
+	runtime=$(echo "$ftime - $itime" | bc)
+	echo "runtime $runtime s"
+	;;
+     *)
+       # echo name of command and start time
+       echo b2 start $1 `date +%T`
+       $@
+       # echo name of command and end time
+       echo end $1 `date +%T`
+       ftime=$(date +%s.%N)
+       #Calcul and echo runtime
+       runtime=$(echo "$ftime - $itime" | bc)
+       echo "runtime $runtime s"
+       ;;
+esac

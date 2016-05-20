@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# nomme avec date ou hash UUID?
+
+time . timescript2 "$@" | tee teetime`date +%s`.tee
