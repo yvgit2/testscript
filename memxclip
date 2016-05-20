@@ -1,0 +1,5 @@
+#!/bin/bash
+# Put info in buffer memory clipboard to
+# be past to gist
+
+$HOME/script/yvdate | xclip -selection clipboard

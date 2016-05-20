@@ -1,0 +1,3 @@
+#!/bin/bash
+# 
+echo Notes `date +%F`.mdNotes `date +%F`
