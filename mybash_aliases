@@ -1,0 +1,6 @@
+#!/bin/bash
+wget https://gist.github.com/yvgit2/c67073e6c73c1904d838/archive/2956c7af87c6cbdfd227c0b6008d6ab0fbaf3c33.zip
+unzip 2956c7af87c6cbdfd227c0b6008d6ab0fbaf3c33.zip
+mv c67073e6c73c1904d838-2956c7af87c6cbdfd227c0b6008d6ab0fbaf3c33/.bash_aliases $HOME/
+cd $HOME
+source .bashrc
